@@ -1,0 +1,218 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Goldman", sans-serif;
+  background-color: rgb(0, 0, 0);
+  cursor: none;
+
+}
+
+.container {
+  display: flex;
+  text-align: center;
+}
+
+.page{
+  cursor:none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cursor {
+  cursor: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.3s ease;
+  padding: 1rem;
+}
+
+.nav-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+}
+
+
+.hoverthis {
+  display: inline-block;
+  font-family: 'Goldman', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  transition: all 0.5 ease;
+  width: 100%;
+  padding: 20px 0;
+  display: inline-block;
+
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.5s ease; 
+}
+
+.hoverthis:hover ~ .cursor {
+  transform:translate(-50%, -50%) scale(15);
+  padding: 0.10rem;
+  color: red;
+}
+
+@media(min-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 900px) {
+  nav {
+    top: 30%;
+  }
+
+}
+.Clicktobegin{
+  position: relative;
+   color: rgb(125, 123, 123);
+   font-size: 24px;
+   font-weight: 100;
+   color: rgb(55, 54, 54);
+   animation-name: fade-in-out;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   transition: all 0.5s ease; 
+ }
+
+ @keyframes fade-in-out {
+  0% { opacity: 1; }
+  50% { opacity: 0.2 }
+  100% { opacity: 1; }
+}
+
+.hovertext {
+  position: relative;
+  color: rgb(125, 123, 123);
+  font-size: 45px;
+  font-weight: 100;
+  color: rgb(55, 54, 54);
+  animation-name: fade-in-out;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 0.5s ease; 
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  font-size: 25px;
+  opacity: 0;
+  width: infinite;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 4;
+  transition: opacity 0.6s ease-in-out;
+  position: absolute;
+  z-index: 300;
+  left: 100;
+  top: 120%;
+  transition: all 0.5s ease; 
+}
+
+.hovertext:hover:before {
+  opacity: 0.5;
+  visibility: visible;
+  transition: all 0.5s ease; 
+}
+
+.scifiUI {
+  list-style: none;
+  position: relative;
+  width: 600px;
+  margin: 50px auto;
+  padding: 0;
+  font-size: 1em;
+  color: #00bebe;
+}
+
+li {
+  display: inline-block;
+}
+li input[type="radio"] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  outline: none;
+}
+li input[type="radio"]:checked ~ label {
+  background: #00bebe;
+  color: #212121;
+  height: 50px;
+  font-size: 1.2em;
+  cursor: default;
+  box-shadow: 0 0 10px #00dcdc;
+}
+li input[type="radio"]:checked ~ .section {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  width: 500px;
+  padding: 50px;
+  border: 1px solid #00bebe;
+  color: #00dcdc;
+  letter-spacing: .1em;
+  text-indent: 1em;
+  z-index: 1;
+}
+li label {
+  display: block;
+  width: 120px;
+  height: 40px;
+  border: 1px solid rgba(0, 190, 190, 0.7);
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  color: rgba(0, 190, 190, 0.7);
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+li label:hover {
+  height: 50px;
+  border-color: #00bebe;
+  color: #00bebe;
+}
+li .section {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 1000px;
+  padding: 50px;
+  border: 1px solid #00bebe;
+  background: rgba(0, 190, 190, 0.1);
+  color: white;
+  letter-spacing: -1em;
+  text-indent: 1em;
+  transition: all 200ms ease-in-out;
+}

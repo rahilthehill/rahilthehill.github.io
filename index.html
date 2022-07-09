@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--Made by Rahil Joshi - rahilthehill.github.io*/-->
+<html lang="en" dir="ltr">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+  <div id='title'></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rahilj's website </title>
+    <link rel="stylesheet" href="stylestart.css">
+   </head>
+   <link href="https://fonts.googleapis.com/css?family=Goldman&display=swap" rel="stylesheet">
+  
+
+   <div class="nav-wrapper">
+     <div>
+       <section class="infolist">
+      <li><div class="hovertext" data-hover="This website only works with a VPN if you are in a country with Geo-Location blocking! Still working on that! Make sure to also turn on your speakers 🔊!">ℹ️Read me!</div></li>
+      <li><div class="hovertext" data-hover="This Site is under development! So its not perfect or finished!">⚠️ Read me!</div></li>
+     <li><div class="hovertext" data-hover="Credits: Audio: Cascadia by MelodySheep">©️Read me!</div></li>
+     <li><div  onClick="playMyAudio()" class="hovertext" data-hover="Click to Mute" >🔊 🔇</div></li>
+    </section>
+
+    <div class="svgflex">
+<svg  viewBox="0 0 2800 700">
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="50%">WELCOME</text>
+    <text text-anchor="middle" x="50.2%" y="80%">TO RAHILJ</text>
+    
+  </symbol>
+
+  <g class = "g-ants">
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+  </g>
+</svg>
+</div>
+     <nav>
+       <a class="hovertext" data-hover="Click to begin exploring." onClick="Redirect1()" >Start Exploring.</a>
+        </div>
+       <div class="cursor"></div>
+      </nav>
+    </div>
+   </div> 
+
+  </div>
+  
+ 
+<audio autoplay>
+
+  <source id="WebsiteSong" src="Cascadia.mp3" type="audio/mp3">
+
+</audio>
+
+<audio 
+autoplay src="Cascadia.mp3" id="myAudio"></audio> 
+   <script>
+     function playMyAudio(){
+      //  document.getElementById("myAudio").mute();
+       alert("The Mute Audio is not working () /Volume.GetError/");
+       myAudio.mute();
+     }
+   </script>
+ 
+
+
+  <script>
+     function Redirect1() {
+    window.location.assign("startpage.html");
+  }
+  
+   function Redirect2() {
+    Clicktobegin.style.display = "none";
+  }
+  function mute() {
+    alert("");
+  }
+  
+
+  </script>
+
+
+
+<div class="copyright"> @Copyright 2022 - Rahil Joshi. All rights reserved - This site was made by Rahil Joshi - If you viewing this on mobile, im sorry, it does not work properly for Mobile yet, however you can FORCE click things to make them work!</div>
+<style>
+  .copyright{
+    color:rgb(60, 59, 59);
+  }
+</style>
+</body>
+<script src="script.js"></script>
+<!--on hover tool tip class="hovertext" data-hover="REPLACE THIS TEXT FOR THE CONTENT THAT YOU WANT TO BE SEEN" -->
+</html>
+
+
